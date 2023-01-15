@@ -9,7 +9,7 @@ export class CarRepositoryMemory implements SaveCarRepository, ListCarsRepositor
     this.cars = []
   }
   static create() {
-    if(! this.instance) this.instance = new CarRepositoryMemory()
+    if(!this.instance) this.instance = new CarRepositoryMemory()
     return this.instance
   }
   async list(): Promise<Car[]> {
